@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List | UIForge</title>
+
+    <meta name="description" content="Modern To-Do List App built with HTML, CSS and JavaScript">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6f2c4c4e4b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!-- Background -->
+
+<div class="background-circle circle1"></div>
+
+<div class="background-circle circle2"></div>
+
+<!-- Container -->
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>
+
+            <i class="fa-solid fa-list-check"></i>
+
+            To-Do List
+
+        </h1>
+
+        <p>
+
+            Organize your day and stay productive.
+
+        </p>
+
+    </header>
+
+    <!-- Add Task -->
+
+    <div class="task-input">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a new task...">
+
+        <button id="addTask">
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="searchTask"
+            placeholder="Search task...">
+
+    </div>
+
+    <!-- Filters -->
+
+    <div class="filters">
+
+        <button class="filter-btn active" data-filter="all">
+
+            All
+
+        </button>
+
+        <button class="filter-btn" data-filter="active">
+
+            Active
+
+        </button>
+
+        <button class="filter-btn" data-filter="completed">
+
+            Completed
+
+        </button>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h2 id="totalTasks">
+
+                0
+
+            </h2>
+
+            <span>Total</span>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="completedTasks">
+
+                0
+
+            </h2>
+
+            <span>Completed</span>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="remainingTasks">
+
+                0
+
+            </h2>
+
+            <span>Remaining</span>
+
+        </div>
+
+    </div>
+
+    <!-- Task List -->
+
+    <ul id="taskList">
+
+        <!-- JavaScript will create tasks here -->
+
+    </ul>
+
+    <!-- Bottom Buttons -->
+
+    <div class="bottom-actions">
+
+        <button id="clearCompleted">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear Completed
+
+        </button>
+
+        <button id="deleteAll">
+
+            <i class="fa-solid fa-trash-can"></i>
+
+            Delete All
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Scroll To Top -->
+
+<button id="topBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
