@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Generate secure and customizable passwords instantly with this modern Password Generator.">
+
+    <title>Password Generator | UIForge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="generator-card">
+
+            <h1>Password Generator</h1>
+            <p class="subtitle">
+                Create strong and secure passwords instantly.
+            </p>
+
+            <!-- Password Display -->
+            <div class="password-box">
+
+                <input
+                    type="text"
+                    id="password"
+                    placeholder="Click Generate"
+                    readonly>
+
+                <button
+                    id="copyBtn"
+                    class="icon-btn"
+                    aria-label="Copy Password">
+
+                    <i class="fa-regular fa-copy"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Length -->
+            <div class="setting">
+
+                <div class="setting-header">
+
+                    <label for="length">
+                        Password Length
+                    </label>
+
+                    <span id="lengthValue">16</span>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="length"
+                    min="8"
+                    max="32"
+                    value="16">
+
+            </div>
+
+            <!-- Options -->
+            <div class="options">
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="uppercase"
+                        checked>
+
+                    <span>Uppercase (A-Z)</span>
+
+                </label>
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="lowercase"
+                        checked>
+
+                    <span>Lowercase (a-z)</span>
+
+                </label>
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="numbers"
+                        checked>
+
+                    <span>Numbers (0-9)</span>
+
+                </label>
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="symbols"
+                        checked>
+
+                    <span>Symbols (!@#$%)</span>
+
+                </label>
+
+            </div>
+
+            <!-- Strength -->
+            <div class="strength-section">
+
+                <span>Password Strength</span>
+
+                <div class="strength-meter">
+
+                    <div id="strengthBar"></div>
+
+                </div>
+
+                <p id="strengthText">
+                    Strong
+                </p>
+
+            </div>
+
+            <!-- Generate -->
+            <button
+                id="generateBtn"
+                class="generate-btn">
+
+                <i class="fa-solid fa-bolt"></i>
+                Generate Password
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Toast -->
+    <div
+        id="toast"
+        class="toast">
+
+        Password copied!
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
