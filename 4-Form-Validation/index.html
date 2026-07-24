@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Form Validation Website built with HTML, CSS, and JavaScript">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Form Validation">
+    <meta name="author" content="UIForge">
+
+    <title>Form Validation | UIForge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6b7f5f1f9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="form-card">
+
+            <div class="header">
+
+                <h1>Create Account</h1>
+
+                <p>Please fill in the information below.</p>
+
+            </div>
+
+            <form id="validationForm" novalidate>
+
+                <!-- Full Name -->
+
+                <div class="input-group">
+
+                    <label for="fullname">Full Name</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            placeholder="Enter your full name"
+                            autocomplete="name">
+
+                    </div>
+
+                    <small class="error" id="nameError"></small>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="input-group">
+
+                    <label for="email">Email Address</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com"
+                            autocomplete="email">
+
+                    </div>
+
+                    <small class="error" id="emailError"></small>
+
+                </div>
+
+                <!-- Phone -->
+
+                <div class="input-group">
+
+                    <label for="phone">Phone Number</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="+880 1234567890"
+                            autocomplete="tel">
+
+                    </div>
+
+                    <small class="error" id="phoneError"></small>
+
+                </div>
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <label for="password">Password</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create password"
+                            autocomplete="new-password">
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="togglePassword"
+                            aria-label="Show Password">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="strength">
+
+                        <div class="strength-bar" id="strengthBar"></div>
+
+                    </div>
+
+                    <small id="strengthText"></small>
+
+                    <small class="error" id="passwordError"></small>
+
+                </div>
+
+                <!-- Confirm Password -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">Confirm Password</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm password"
+                            autocomplete="new-password">
+
+                    </div>
+
+                    <small class="error" id="confirmError"></small>
+
+                </div>
+
+                <!-- Terms -->
+
+                <div class="checkbox-group">
+
+                    <input
+                        type="checkbox"
+                        id="terms">
+
+                    <label for="terms">
+
+                        I agree to the Terms & Conditions
+
+                    </label>
+
+                </div>
+
+                <small class="error" id="termsError"></small>
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Create Account
+
+                </button>
+
+                <div
+                    class="success-message"
+                    id="successMessage">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
